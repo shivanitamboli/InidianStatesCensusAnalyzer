@@ -4,17 +4,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CensusAnalyser {
-	public static void main(String[] args) throws IOException, StateSensorAnalyserException {
-		System.out.println("Welcome to Indian States Census Analyser");
-		String filePathRead = ".src/main/resources/IndianStatesCensusAnalyser.csv";
-		String fileName = "IndianStateCensusData";
+public class StateCode {
+	public static void main(String[] args) throws StateSensorAnalyserException, IOException {
+		String filePathRead = "./src/main/resources/StateCode.csv";
+		String fileName = "StateCode";
 		String delimiter = ",";
 		List<String> stringName = new ArrayList<>();
+		stringName.add("SrNo");
 		stringName.add("State");
-		stringName.add("Population");
-		stringName.add("AreaInSqKm");
-		stringName.add("DensityPerSqKm");
+		stringName.add("Name");
+		stringName.add("TIN");
+		stringName.add("StateCode");
 
 		ReadOperations readObj = new ReadOperations();
 		int count = readObj.readDataCount(filePathRead, fileName);
